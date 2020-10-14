@@ -41,10 +41,12 @@ def test_full():
     """
     Assert the message schema validates a message with the required fields.
     """
+    meeting = DUMMY_MEETING.copy()
+    meeting["meeting_manager"] = []
     body = {
         "agent": "dummy_user",
         "calendar": DUMMY_CALENDAR,
-        "meeting": DUMMY_MEETING,
+        "meeting": meeting,
     }
     message = MeetingDeleteV1(body=body)
     message.validate()

@@ -25,7 +25,7 @@ MEETING = {
     "properties": {
         "meeting_id": {"type": "number"},
         "meeting_name": {"type": "string"},
-        "meeting_manager": {"type": "string"},
+        "meeting_manager": {"type": "array", "items": {"type": ["string", "null"]}},
         "meeting_date": {"type": "string"},
         "meeting_date_end": {"type": "string"},
         "meeting_time_start": {"type": "string"},

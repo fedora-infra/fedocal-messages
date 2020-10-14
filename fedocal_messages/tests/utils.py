@@ -35,7 +35,7 @@ DUMMY_MEETING = {
     "meeting_location": None,
     "meeting_date_end": "2013-09-21",
     "meeting_timezone": "UTC",
-    "meeting_manager": "ralph,",
+    "meeting_manager": ["ralph"],
     "meeting_date": "2013-09-20",
     "meeting_information": "awesome",
     "meeting_region": None,
