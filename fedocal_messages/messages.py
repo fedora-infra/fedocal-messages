@@ -155,7 +155,7 @@ class CalendarUploadV1(fedocalMessage):
     published by fedocal when meetings have been uploaded into the calendar.
     """
 
-    topic = "fedocal.calendar.update"
+    topic = "fedocal.calendar.upload"
 
     body_schema = {
         "id": SCHEMA_URL + topic,
