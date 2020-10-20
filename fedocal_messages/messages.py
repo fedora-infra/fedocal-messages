@@ -319,7 +319,7 @@ class MeetingDeleteV1(FedocalMessage):
     published by fedocal when a meeting is deleted.
     """
 
-    topic = "fedocal.meeting.deleted"
+    topic = "fedocal.meeting.delete"
 
     body_schema = {
         "id": SCHEMA_URL + topic,
