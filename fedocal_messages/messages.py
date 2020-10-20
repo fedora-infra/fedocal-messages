@@ -18,7 +18,7 @@ import datetime
 
 import dateutil.relativedelta
 
-from .base import SCHEMA_URL, fedocalMessage, CALENDAR, MEETING
+from .base import SCHEMA_URL, FedocalMessage, CALENDAR, MEETING
 
 
 def _casual_timedelta_string(meeting):
@@ -49,7 +49,7 @@ def _casual_timedelta_string(meeting):
     return "right now"
 
 
-class ReminderV1(fedocalMessage):
+class ReminderV1(FedocalMessage):
     """
     A sub-class of a Fedora message that defines a message schema for messages
     published by fedocal when a reminder is sent.
@@ -89,7 +89,7 @@ class ReminderV1(fedocalMessage):
         )
 
 
-class CalendarNewV1(fedocalMessage):
+class CalendarNewV1(FedocalMessage):
     """
     A sub-class of a Fedora message that defines a message schema for messages
     published by fedocal when a calendar is created.
@@ -119,7 +119,7 @@ class CalendarNewV1(fedocalMessage):
         return str(self)
 
 
-class CalendarUpdateV1(fedocalMessage):
+class CalendarUpdateV1(FedocalMessage):
     """
     A sub-class of a Fedora message that defines a message schema for messages
     published by fedocal when a calendar is updated.
@@ -149,7 +149,7 @@ class CalendarUpdateV1(fedocalMessage):
         return str(self)
 
 
-class CalendarUploadV1(fedocalMessage):
+class CalendarUploadV1(FedocalMessage):
     """
     A sub-class of a Fedora message that defines a message schema for messages
     published by fedocal when meetings have been uploaded into the calendar.
@@ -180,7 +180,7 @@ class CalendarUploadV1(fedocalMessage):
         return str(self)
 
 
-class CalendarDeleteV1(fedocalMessage):
+class CalendarDeleteV1(FedocalMessage):
     """
     A sub-class of a Fedora message that defines a message schema for messages
     published by fedocal when a calendar is deleted.
@@ -210,7 +210,7 @@ class CalendarDeleteV1(fedocalMessage):
         return str(self)
 
 
-class CalendarClearV1(fedocalMessage):
+class CalendarClearV1(FedocalMessage):
     """
     A sub-class of a Fedora message that defines a message schema for messages
     published by fedocal when a calendar is cleared.
@@ -240,7 +240,7 @@ class CalendarClearV1(fedocalMessage):
         return str(self)
 
 
-class MeetingNewV1(fedocalMessage):
+class MeetingNewV1(FedocalMessage):
     """
     A sub-class of a Fedora message that defines a message schema for messages
     published by fedocal when a meeting is created.
@@ -278,7 +278,7 @@ class MeetingNewV1(fedocalMessage):
         return str(self)
 
 
-class MeetingUpdateV1(fedocalMessage):
+class MeetingUpdateV1(FedocalMessage):
     """
     A sub-class of a Fedora message that defines a message schema for messages
     published by fedocal when a meeting is updated.
@@ -313,7 +313,7 @@ class MeetingUpdateV1(fedocalMessage):
         return str(self)
 
 
-class MeetingDeleteV1(fedocalMessage):
+class MeetingDeleteV1(FedocalMessage):
     """
     A sub-class of a Fedora message that defines a message schema for messages
     published by fedocal when a meeting is deleted.

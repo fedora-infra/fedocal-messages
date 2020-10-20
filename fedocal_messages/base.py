@@ -71,7 +71,7 @@ CALENDAR = {
 }
 
 
-class fedocalMessage(message.Message):
+class FedocalMessage(message.Message):
     """
     A sub-class of a Fedora message that defines a message schema for messages
     published by fedocal.
