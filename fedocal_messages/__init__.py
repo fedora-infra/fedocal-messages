@@ -14,4 +14,35 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-from .messages import ReminderV1  # noqa: F401
+import pkg_resources
+from fedora_messaging import message
+
+
+from .messages import (  # noqa: F401
+    ReminderV1,
+    CalendarNewV1,
+    CalendarUpdateV1,
+    CalendarUploadV1,
+    CalendarDeleteV1,
+    CalendarClearV1,
+    MeetingNewV1,
+    MeetingUpdateV1,
+    MeetingDeleteV1,
+)
+
+
+def get_message_object_from_topic(topic):
+    """Returns the Message class corresponding to the topic."""
+
+    output = None
+
+    for entry_point in pkg_resources.iter_entry_points("fedora.messages"):
+        cls = entry_point.load()
+        if cls().topic == topic:
+            output = cls
+            break
+
+    if output is None:
+        output = message.Message
+
+    return output
