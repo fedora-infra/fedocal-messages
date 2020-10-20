@@ -16,8 +16,6 @@
 
 """Unit tests for common properties of the message schemas."""
 
-import fedora_messaging.api
-
 from .. import get_message_object_from_topic
 
 
@@ -26,6 +24,7 @@ def test_object_type():
     cls = get_message_object_from_topic("fedocal.calendar.clear")
     assert str(type(cls())) == "<class 'fedocal_messages.messages.CalendarClearV1'>"
     assert cls().app_name == "fedocal"
+
 
 def test_topic():
     """Assert some properties are correct."""
