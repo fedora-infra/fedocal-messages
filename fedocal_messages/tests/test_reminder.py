@@ -18,11 +18,12 @@
 
 import datetime
 
+from jsonschema import ValidationError
+
 import pytest
 
-from jsonschema import ValidationError
-from ..messages import ReminderV1
 from .utils import DUMMY_CALENDAR, DUMMY_MEETING
+from ..messages import ReminderV1
 
 
 def test_minimal():

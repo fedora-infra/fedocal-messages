@@ -16,8 +16,8 @@
 
 """Unit tests for common properties of the message schemas."""
 
-from ..messages import ReminderV1
 from .utils import DUMMY_CALENDAR, DUMMY_MEETING
+from ..messages import ReminderV1
 
 
 def test_properties():

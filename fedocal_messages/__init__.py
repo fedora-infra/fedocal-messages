@@ -14,20 +14,20 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-import pkg_resources
 from fedora_messaging import message
 
+import pkg_resources
 
 from .messages import (  # noqa: F401
-    ReminderV1,
+    CalendarClearV1,
+    CalendarDeleteV1,
     CalendarNewV1,
     CalendarUpdateV1,
     CalendarUploadV1,
-    CalendarDeleteV1,
-    CalendarClearV1,
+    MeetingDeleteV1,
     MeetingNewV1,
     MeetingUpdateV1,
-    MeetingDeleteV1,
+    ReminderV1,
 )
 
 

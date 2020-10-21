@@ -18,7 +18,7 @@ import datetime
 
 import dateutil.relativedelta
 
-from .base import SCHEMA_URL, FedocalMessage, CALENDAR, MEETING
+from .base import CALENDAR, FedocalMessage, MEETING, SCHEMA_URL
 
 
 def _casual_timedelta_string(meeting):

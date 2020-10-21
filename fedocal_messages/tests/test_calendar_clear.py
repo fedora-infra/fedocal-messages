@@ -16,11 +16,12 @@
 
 """Unit tests for the message schema."""
 
+from jsonschema import ValidationError
+
 import pytest
 
-from jsonschema import ValidationError
-from ..messages import CalendarClearV1
 from .utils import DUMMY_CALENDAR
+from ..messages import CalendarClearV1
 
 
 def test_minimal():
