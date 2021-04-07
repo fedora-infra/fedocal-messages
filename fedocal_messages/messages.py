@@ -55,7 +55,7 @@ class ReminderV1(FedocalMessage):
     published by fedocal when a reminder is sent.
     """
 
-    topic = "fedocal.reminder"
+    topic = "fedocal.meeting.reminder"
 
     body_schema = {
         "id": SCHEMA_URL + topic,
